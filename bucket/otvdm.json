@@ -1,0 +1,14 @@
+{
+    "homepage": "https://github.com/otya128/winevdm",
+    "version": "0.7.0",
+    "description": "16-bit Windows (Windows 1.x, 2.x, 3.0, 3.1, etc.) on 64-bit Windows. An altered version of winevdm (a 16-bit Windows emulator), ported to 64-bit Windows.",
+    "checkver": {
+        "url": "https://github.com/otya128/winevdm/releases",
+        "re": ">v(.*?)<"
+    },
+    "url": "https://github.com/otya128/winevdm/releases/download/v0.7.0/otvdm-v0.7.0.zip",
+    "hash": "b07ef931fbfa8184250f9192823dedd5b8a0aa299d4b92dbdbbea8e005c9f8bc",
+    "autoupdate": {
+        "url": "https://github.com/otya128/winevdm/releases/download/v$version/otvdm-v$version.zip"
+    }
+}

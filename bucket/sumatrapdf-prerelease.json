@@ -1,0 +1,36 @@
+{
+    "version": "13356",
+    "description": "PDF and eBook reader",
+    "homepage": "https://www.sumatrapdfreader.org",
+    "license": "GPL-3.0-only,BSD-2-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/prerel/SumatraPDF-prerel-13356-64-install.exe#/dl.exe",
+            "hash": "d9bfec357fe9cd2d933a2b12bc1bed029237e9e04c85a91e94afe3b05b60ecf7"
+        },
+        "32bit": {
+            "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/prerel/SumatraPDF-prerel-13356-install.exe#/dl.exe",
+            "hash": "8ae522b9e50632c30171220d382ac50bd98aa7d03c6e69d99d5d6a27b36fd658"
+        }
+    },
+    "checkver": {
+        "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/sumatralatest.js",
+        "regex": "sumLatestVer = ([\\d]+);"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/prerel/SumatraPDF-prerel-$version-64-install.exe#/dl.exe"
+            },
+            "32bit": {
+                "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/prerel/SumatraPDF-prerel-$version-install.exe#/dl.exe"
+            }
+        }
+    },
+    "installer": {
+        "file": "dl.exe",
+        "args": "-x",
+        "keep": false
+    },
+    "post_install": "Write-Output '[Policies]' 'CopySelection    = 1' 'DiskAccess       = 1' 'FullscreenAccess = 1' 'InternetAccess   = 0' 'LinkProtocols    = http,https' 'PrinterAccess    = 0' 'RegistryAccess   = 0' 'SafeFileTypes    =' 'SavePreferences  = 1' | Out-File \"$dir\\sumatrapdfrestrict.ini\""
+}

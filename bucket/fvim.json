@@ -1,0 +1,29 @@
+{
+    "homepage": "https://github.com/yatli/fvim",
+    "version": "0.2.348+81",
+    "description": "Cross platform Neovim front-end UI, built with F# + Avalonia",
+    "checkver": {
+        "url": "https://github.com/yatli/fvim/releases/latest",
+        "re": ">v(\\d+(\\.\\d+)+\\+\\d+)"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/yatli/fvim/releases/latest/download/fvim-win-x64.zip",
+            "hash": "5365277e1fc26c55833b873646bad49d4839b94989dbb52bc5e2056cac01e248"
+        }
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/yatli/fvim/releases/latest/download/fvim-win-x64.zip"
+            }
+        }
+    },
+    "bin": "FVim.exe",
+    "shortcuts": [
+        [
+            "FVim.exe",
+            "Fvim"
+        ]
+    ]
+}

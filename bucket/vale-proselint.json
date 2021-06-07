@@ -1,0 +1,22 @@
+{
+    "homepage": "https://github.com/errata-ai/proselint",
+    "version": "0.3.2",
+    "description": "This repository contains a Vale-compatible implementation of the guidelines enforced by the proselint linter.",
+    "checkver": {
+        "url": "https://github.com/errata-ai/proselint/releases/latest",
+        "re": "v([\\d.]+[\\d](-rc..)?)<"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/errata-ai/proselint/releases/download/v0.3.2/proselint.zip",
+            "hash": "6fb089593356ca65a797af22936f87d8b6b9161910fc7848cd37d07e003ecbb4"
+        },
+        "32bit": {
+            "url": "https://github.com/errata-ai/proselint/releases/download/v0.3.2/proselint.zip",
+            "hash": "6fb089593356ca65a797af22936f87d8b6b9161910fc7848cd37d07e003ecbb4"
+        }
+    },
+    "autoupdate": {
+        "url": "https://github.com/errata-ai/proselint/releases/download/v$version/proselint.zip"
+    }
+}

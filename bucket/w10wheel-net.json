@@ -1,0 +1,29 @@
+{
+    "homepage": "https://github.com/ykon/w10wheel.net",
+    "version": "2.7.3",
+    "description": "W10Wheel.NET is the Mouse Wheel Simulator for Windows 10.",
+    "checkver": {
+        "url": "https://github.com/ykon/w10wheel.net/releases/latest",
+        "re": "releases/tag.*?>(.*?)</a>"
+    },
+    "url": "https://github.com/ykon/w10wheel.net/releases/download/v2.7.3/W10Wheel.NET-2.7.3.zip#/dl.zip_",
+    "hash": "daf8a2624267d257592ab9a124e674e68f5727acfbddedf4a0884981c08556f9",
+    "autoupdate": {
+        "url": "https://github.com/ykon/w10wheel.net/releases/download/v$version/W10Wheel.NET-$version.zip#/dl.zip_"
+    },
+    "installer": {
+        "script": [
+            "mkdir \"$dir\\tmp\" > $null",
+            "7z e -o\"$dir\\tmp\" -aoa \"$dir\\$fname\" > $null",
+            "Get-ChildItem \"$dir\\tmp\" -Attributes !Directory -Recurse | Move-Item -Destination \"$dir\" > $null",
+            "Remove-Item \"$dir\\tmp\" -Recurse -Force > $null",
+            "Remove-Item \"$dir\\$fname\" > $null"
+        ]
+    },
+    "shortcuts": [
+        [
+            "W10Wheel.exe",
+            "W10wheel"
+        ]
+    ]
+}
