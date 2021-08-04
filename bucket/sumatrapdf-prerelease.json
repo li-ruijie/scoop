@@ -1,16 +1,16 @@
 {
-    "version": "13979",
+    "version": "13980",
     "description": "PDF and eBook reader",
     "homepage": "https://www.sumatrapdfreader.org",
     "license": "GPL-3.0-only,BSD-2-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/prerel/SumatraPDF-prerel-13979-64-install.exe#/dl.exe",
-            "hash": "2a200c0c28611bb1074474c90730e288539e6547a1311ed3b2a117b459b19def"
+            "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/prerel/SumatraPDF-prerel-13980-64-install.exe#/dl.exe",
+            "hash": "91abb097d7967ca52645d1418dc40df9bed53d2b19153602c218b9144ff1fab0"
         },
         "32bit": {
-            "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/prerel/SumatraPDF-prerel-13979-install.exe#/dl.exe",
-            "hash": "0077c4e2446905b396c4753fcff94f528a358b75e9fdf6494fcc847ec491da06"
+            "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/prerel/SumatraPDF-prerel-13980-install.exe#/dl.exe",
+            "hash": "fe11025078d5dfa23da3dec7baf17ea3dfd232a617aa8f72be2c710aaf0494de"
         }
     },
     "checkver": {
