@@ -1,0 +1,25 @@
+{
+    "version": "2.51.4+ocaml-4.10.2",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/bcpierce00/unison/releases/download/v2.51.4/unison-v2.51.4+ocaml-4.10.2+i386.windows.zip",
+            "hash": "7aac32e952c9a781593dbd7972b07649ef88637aebaaabea7c863f1b42a192db"
+        }
+    },
+    "description": "A file-synchronization tool.",
+    "homepage": "https://www.cis.upenn.edu/~bcpierce/unison",
+    "license": "GPL-3.0-only",
+    "checkver": {
+        "url": "https://github.com/bcpierce00/unison/releases/latest",
+        "regex": ">(?<filenamedl>unison-v(?<versionall>(?<versionpart>(\\d+\\.)+\\d+)\\+(?<ocamver>ocaml-(\\d+\\.)+\\d+))\\+i386.*windows\\.zip)<",
+        "replace": "${versionall}",
+        "reverse": true
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/bcpierce00/unison/releases/download/v$matchVersionpart/$matchFilenamedl"
+            }
+        }
+    }
+}
