@@ -1,10 +1,10 @@
 {
-    "version": "7.1.0-5",
+    "version": "7.1.0",
     "description": "Create, edit, compose, and convert 200+ of bitmap images formats.",
     "homepage": "https://imagemagick.org/",
     "license": "ImageMagick",
-    "url": "https://ftp.acc.umu.se/mirror/imagemagick.org/ftp/binaries/ImageMagick-7.1.0-5-portable-Q16-x64.zip",
-    "hash": "3ebab672e9b06a5c259254ddd270fb796ab05836606eb7b3e134060a0c677897",
+    "url": "https://download.imagemagick.org/ImageMagick/download/binaries/ImageMagick-7.1.0-portable-Q16-x64.zip",
+    "hash": "444bb252eb171007353c3dca16f79fb6efd129d1ae31b777b4c8c3e296832e3c",
     "bin": [
         "compare.exe",
         "composite.exe",
@@ -22,8 +22,12 @@
         "montage.exe",
         "stream.exe"
     ],
-    "checkver": "The current release is ImageMagick <a.*?>([0-9\\.p-]+)</a>",
+    "checkver": {
+        "url": "https://download.imagemagick.org/ImageMagick/download/binaries/",
+        "regex": "ImageMagick-((\\d+\\.)+(\\d+))-portable-Q16-x64.zip",
+        "reverse": true
+    },
     "autoupdate": {
-        "url": "https://ftp.acc.umu.se/mirror/imagemagick.org/ftp/binaries/ImageMagick-$version-portable-Q16-x64.zip"
+        "url": "https://download.imagemagick.org/ImageMagick/download/binaries/ImageMagick-$version-portable-Q16-x64.zip"
     }
 }

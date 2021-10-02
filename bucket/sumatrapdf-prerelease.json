@@ -1,42 +1,22 @@
 {
-    "version": "14017",
+    "version": "14154",
     "description": "PDF and eBook reader",
     "homepage": "https://www.sumatrapdfreader.org",
     "license": "GPL-3.0-only,BSD-2-Clause",
-    "architecture": {
-        "64bit": {
-            "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/prerel/SumatraPDF-prerel-14017-64-install.exe",
-            "hash": "9fd85b8a3de6fc0ecedae2f66f6ddc275638833f78ff3374b620c9422dab0e51"
-        },
-        "32bit": {
-            "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/prerel/SumatraPDF-prerel-14017-install.exe",
-            "hash": "406942a56abb102e833660932e9729058e326af2d71123964e04138ec66cb09a"
-        }
-    },
+    "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/prerel/14154/SumatraPDF-prerel-64.zip",
+    "hash": "32c563144336b3243270af32edc515542d78eb17b77529fca25d2223f6911846",
     "checkver": {
         "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/sumatralatest.js",
-        "regex": "sumLatestVer = ([\\d]+);"
+        "regex": "var sumLatestExeZip64\\s+=\\s+\"(?<url>https.*/prerel/(?<version>.*?)/SumatraPDF-prerel-64.zip)\";",
+        "replace": "${version}"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/prerel/SumatraPDF-prerel-$version-64-install.exe"
-            },
-            "32bit": {
-                "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/prerel/SumatraPDF-prerel-$version-install.exe"
-            }
-        }
+        "url": "$matchUrl"
     },
     "installer": {
-        "script": [
-            "Push-Location \"$dir\"",
-            "&\"$dir\\$fname\" -x",
-            "Start-Sleep -Seconds 1",
-            "Pop-Location"
-        ]
+        "file": "dl.exe",
+        "args": "-x",
+        "keep": false
     },
-    "post_install": [
-        "Remove-Item \"$dir\\$fname\"",
-        "Write-Output '[Policies]' 'CopySelection    = 1' 'DiskAccess       = 1' 'FullscreenAccess = 1' 'InternetAccess   = 0' 'LinkProtocols    = http,https' 'PrinterAccess    = 0' 'RegistryAccess   = 0' 'SafeFileTypes    =' 'SavePreferences  = 1' | Out-File \"$dir\\sumatrapdfrestrict.ini\""
-    ]
+    "post_install": "Write-Output '[Policies]' 'CopySelection    = 1' 'DiskAccess       = 1' 'FullscreenAccess = 1' 'InternetAccess   = 0' 'LinkProtocols    = http,https' 'PrinterAccess    = 0' 'RegistryAccess   = 0' 'SafeFileTypes    =' 'SavePreferences  = 1' | Out-File \"$dir\\sumatrapdfrestrict.ini\""
 }
