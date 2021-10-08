@@ -1,10 +1,10 @@
 {
     "homepage": "https://www.r-project.org",
     "description": "A free software environment for statistical computing and graphics.",
-    "version": "2021-10-07",
+    "version": "2021-10-08",
     "license": "GPL-2.0-only",
     "url": "https://cloud.r-project.org/bin/windows/base/R-patched.exe",
-    "hash": "1c85e91841af81af66102544b793d6d7b29ca90fb2216cbbf21a1603bf9cfc5e",
+    "hash": "28a05daf88a4ce9fed0a93a959f3d827a52822fdc346a4b17c065a72c4d12d00",
     "innosetup": true,
     "architecture": {
         "64bit": {
