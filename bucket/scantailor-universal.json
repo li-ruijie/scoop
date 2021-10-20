@@ -2,15 +2,15 @@
     "description": "A fork based on Enhanced+Featured+Master versions of ScanTailor.",
     "homepage": "https://github.com/trufanov-nok/scantailor",
     "license": "GPL-3.0-only",
-    "version": "0.2.12",
+    "version": "0.2.13",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/trufanov-nok/scantailor-universal/releases/download/0.2.12/scantailor-universal-0.2.12-64bit-install.exe#!/dl.7z",
-            "hash": "c24a7c368559425b6233f0d5b81b7d2edaa68439b967378c121f890bfe8a6853"
+            "url": "https://github.com/trufanov-nok/scantailor-universal/releases/download/0.2.13/scantailor-universal-0.2.13-64bit-install.exe#!/dl.7z",
+            "hash": "40ba7208f4e6bc5788b3c83adfc10a2d50be70aa2129adf42e324a2210c3c494"
         },
         "32bit": {
-            "url": "https://github.com/trufanov-nok/scantailor-universal/releases/download/0.2.12/scantailor-universal-0.2.12-32bit-install.exe#!/dl.7z",
-            "hash": "a6fab087e20481f13a42748a933fb723ca934bef023d7ed2a6e7974abe820ed2"
+            "url": "https://github.com/trufanov-nok/scantailor-universal/releases/download/0.2.13/scantailor-universal-0.2.13-32bit-install.exe#!/dl.7z",
+            "hash": "3d710f5811631097244ece9b28d21c70d6e8727a51d656c337350710db0696be"
         }
     },
     "bin": "scantailor-cli.exe",
