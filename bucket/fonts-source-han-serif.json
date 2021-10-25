@@ -1,13 +1,13 @@
 {
     "homepage": "https://github.com/adobe-fonts/source-han-serif",
-    "version": "1.001R",
+    "version": "2.000",
     "description": "Source Han Serif is a set of OpenType/CFF Pan-CJK fonts.",
     "checkver": {
         "url": "https://github.com/adobe-fonts/source-han-serif/releases/latest",
         "re": "tree/(.*?)\""
     },
-    "url": "https://github.com/adobe-fonts/source-han-serif/archive/1.001R.zip#/dl.zi_",
-    "hash": "cbf26d10d4276331c354cbd9e8509e525dd198fbcec87f6adad7122658c1359e",
+    "url": "https://github.com/adobe-fonts/source-han-serif/archive/2.000.zip#/dl.zi_",
+    "hash": "bb56a9d6ca6bd482b3009104b78d2d0fb8cf065eb141892bf6d0fec1d75635af",
     "autoupdate": {
         "url": "https://github.com/adobe-fonts/source-han-serif/archive/$version.zip#/dl.zi_"
     },
