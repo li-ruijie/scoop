@@ -2,11 +2,11 @@
     "homepage": "https://www.vim.org",
     "description": "A highly configurable text editor for efficiently creating and changing any kind of text.",
     "license": "Vim",
-    "version": "8.2.3564",
+    "version": "8.2.3565",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/vim/vim-win32-installer/releases/download/v8.2.3564/gvim_8.2.3564_x64.zip",
-            "hash": "18c9906824e76f16f6adaf54becd29293d27aacc471203287cfe039d3a0dc0de"
+            "url": "https://github.com/vim/vim-win32-installer/releases/download/v8.2.3565/gvim_8.2.3565_x64.zip",
+            "hash": "3f60ada7d00da1534aa5cb8fe88743e3af7c46a268a1ff7f5f99275e3f1cfcb4"
         }
     },
     "extract_dir": "vim\\vim82",
