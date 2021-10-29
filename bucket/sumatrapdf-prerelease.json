@@ -3,20 +3,25 @@
     "description": "PDF and eBook reader",
     "homepage": "https://www.sumatrapdfreader.org",
     "license": "GPL-3.0-only,BSD-2-Clause",
-    "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/prerel/14210/SumatraPDF-prerel-64.zip",
-    "hash": "edad8f6bb2a50ea3a62263b5377489ca74b965b93b3339ddfd7f886fe3226ae4",
+    "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/prerel/14210/SumatraPDF-prerel-64-install.exe",
+    "hash": "78ae84af72a69ca67cd8003fa0fd9b79f9b13c2184e6a59d1eb9384f16148229",
     "checkver": {
         "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/sumatralatest.js",
-        "regex": "var sumLatestExeZip64\\s+=\\s+\"(?<url>https.*/prerel/(?<version>.*?)/SumatraPDF-prerel-64.zip)\";",
+        "regex": "var sumLatestInstaller64\\s+=\\s+\"(?<url>https.*/prerel/(?<version>.*?)/SumatraPDF-prerel-64.install.exe)\";",
         "replace": "${version}"
     },
     "autoupdate": {
         "url": "$matchUrl"
     },
     "installer": {
-        "file": "dl.exe",
-        "args": "-x",
-        "keep": false
+        "keep": false,
+        "script": [
+            "PUSHD \"$dir\"",
+            "&.\\\"$fname\" -x",
+            "Start-Sleep -Seconds 1",
+            "Remove-Item -Force \"$fname\"",
+            "POPD"
+        ]
     },
     "post_install": "Write-Output '[Policies]' 'CopySelection    = 1' 'DiskAccess       = 1' 'FullscreenAccess = 1' 'InternetAccess   = 0' 'LinkProtocols    = http,https' 'PrinterAccess    = 0' 'RegistryAccess   = 0' 'SafeFileTypes    =' 'SavePreferences  = 1' | Out-File \"$dir\\sumatrapdfrestrict.ini\""
 }
