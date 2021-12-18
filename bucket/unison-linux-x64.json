@@ -1,9 +1,9 @@
 {
-    "version": "2.51.4+ocaml-4.12.0",
+    "version": "2.51.5+ocaml-4.12.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/bcpierce00/unison/releases/download/v2.51.4/unison-v2.51.4+ocaml-4.12.0+x86_64.linux.tar.gz",
-            "hash": "9a486aedb565e44fdef33c5de9580f53a8ec17bc43e626d29dd4971a25243b5d"
+            "url": "https://github.com/bcpierce00/unison/releases/download/v2.51.5/unison-v2.51.5+ocaml-4.12.0+x86_64.linux.tar.gz",
+            "hash": "dad5505c2d9113ed2540887caba50846dd24b9875a355cae3a9b92a863b475b6"
         }
     },
     "description": "A file-synchronization tool.",
