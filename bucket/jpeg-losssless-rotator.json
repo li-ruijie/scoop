@@ -1,0 +1,17 @@
+{
+    "version": "10.0",
+    "description": "Free and simple software for turning digital photos to the correct orientation.",
+    "homepage": "https://annystudio.com/software/jpeglosslessrotator/",
+    "url": " https://annystudio.com/jpegr_portable_64bit.zip",
+    "hash": "994c2ba2727483a08cd1bf462f3b433f73af598ef30ef91539645d4e0ffd700e",
+    "checkver": "<p><b>Latest version:</b> ((\\d+\\.)+\\d+), released .*?\\.</p>",
+    "shortcuts": [
+        [
+            "jpegr.exe",
+            "JPEG lossless rotator"
+        ]
+    ],
+    "autoupdate": {
+        "url": " https://annystudio.com/jpegr_portable_64bit.zip"
+    }
+}
