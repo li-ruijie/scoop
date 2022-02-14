@@ -8,9 +8,10 @@
     "shortcuts": [
         [
             "jpegr.exe",
-            "JPEG lossless rotator"
+            "JPEG Lossless Rotator"
         ]
     ],
+    "persist": "jpegr.ini",
     "extract_dir": "jpegr_portable_64bit",
     "autoupdate": {
         "url": " https://annystudio.com/jpegr_portable_64bit.zip"
