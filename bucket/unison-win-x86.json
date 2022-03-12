@@ -1,9 +1,9 @@
 {
-    "version": "2.51.5+ocaml-4.10.2",
+    "version": "2.52.0+ocaml-4.10.2",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/bcpierce00/unison/releases/download/v2.51.5/unison-v2.51.5+ocaml-4.10.2+i386.windows.zip",
-            "hash": "dd58abd85f028ef2054210276cb9070ac49a73b9fd9a31d0bfbb82f27cae1364"
+            "url": "https://github.com/bcpierce00/unison/releases/download/v2.52.0/unison-v2.52.0+ocaml-4.10.2+i386.windows.zip",
+            "hash": "19f2e1ba39f300fada565c687ff726fa6bff140511b2bf7d0acc19843e6d412f"
         }
     },
     "description": "A file-synchronization tool.",
