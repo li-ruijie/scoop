@@ -1,9 +1,9 @@
 {
     "homepage": "https://fedorapeople.org/groups/virt/virtio-win/",
     "description": "Virtio windows drivers.",
-    "version": "0.1.215-2",
-    "hash": "b9d8442c53e2383b60e49905a9e5911419a253c6a1838be3ea90c7209b26b5d7",
-    "url": "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.215-2/virtio-win.iso",
+    "version": "0.1.217-1",
+    "hash": "b8a4bc66835c43091a85d35a10b59bd8b1b62b55ea9f02ec754f68bd32e82c0e",
+    "url": "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.217-1/virtio-win.iso",
     "checkver": {
         "url": "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/?C=M;O=D",
         "regex": "virtio-win-((\\d+\\.)+\\d+.*?)\\/"
