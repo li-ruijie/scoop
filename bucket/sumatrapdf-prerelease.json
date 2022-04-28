@@ -1,10 +1,10 @@
 {
-    "version": "14498",
+    "version": "14500",
     "description": "PDF and eBook reader",
     "homepage": "https://www.sumatrapdfreader.org",
     "license": "GPL-3.0-only,BSD-2-Clause",
-    "url": "https://www.sumatrapdfreader.org/dl/prerel/14498/SumatraPDF-prerel-64-install.exe",
-    "hash": "90434fef9d163a426822e4bd80429bab9b4e643a53891a76b07ac51024639dbb",
+    "url": "https://www.sumatrapdfreader.org/dl/prerel/14500/SumatraPDF-prerel-64-install.exe",
+    "hash": "19a6a527f65b7781fa0cbd809293033de5199ba34cfa2c6ab6d9500fc1368075",
     "checkver": {
         "url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/sumatralatest.js",
         "regex": "var sumLatestInstaller64\\s+=\\s+\"(?<url>https.*/prerel/(?<version>.*?)/SumatraPDF-prerel-64.install.exe)\";",
