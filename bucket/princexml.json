@@ -1,6 +1,6 @@
 {
     "homepage": "https://www.princexml.com/download/",
-    "version": "14.2",
+    "version": "14.3",
     "description": "Convert HTML to PDF.  Beautiful printing with simple CSS.",
     "checkver": {
         "url": "https://www.princexml.com/download/",
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://www.princexml.com/download/prince-14.2-win64-setup.exe#/prince.ex_",
-            "hash": "9767d5b529aab14f05c17d4918bdca99c8a9afcbe6ec70615c9e8b8ea4599018"
+            "url": "https://www.princexml.com/download/prince-14.3-win64-setup.exe#/prince.ex_",
+            "hash": "9711b0c020c0f2f43ca58c564eb5d02ae130b36c57cdc6b8c316fb0da976bbfb"
         },
         "32bit": {
-            "url": "https://www.princexml.com/download/prince-14.2-win32-setup.exe#/prince.ex_",
-            "hash": "1d690977a77cd40a79d3cd433f1c5e6f0eccd7be34ea75b718ecb726e0a04d0f"
+            "url": "https://www.princexml.com/download/prince-14.3-win32-setup.exe#/prince.ex_",
+            "hash": "f254dfaa51b18f8f4925256edc265c7c76febb33f79e6c1d6a28785522d3ba31"
         }
     },
     "autoupdate": {
