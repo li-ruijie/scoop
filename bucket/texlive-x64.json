@@ -1,7 +1,7 @@
 {
     "homepage": "https://tug.org/texlive/",
     "description": "A complete TeX document production system.",
-    "version": "2022-05-24",
+    "version": "2022-06-13",
     "hash": "3b59e178a35a498f6a535a66379cf49b74e916bb99f9147ee90c175b61ab6a07",
     "url": "http://dante.ctan.org/tex-archive/systems/win32/w32tex/TLW64/tl-win64.zip",
     "depends": "ghostscript",
