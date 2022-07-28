@@ -1,6 +1,6 @@
 {
     "homepage": "https://github.com/VirusTotal/vt-cli",
-    "version": "0.10.2",
+    "version": "0.10.1",
     "description": "VirusTotal Command Line Interface",
     "checkver": "github",
     "architecture": {
