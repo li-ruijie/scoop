@@ -1,13 +1,13 @@
 {
     "homepage": "https://github.com/be5invis/Iosevka",
-    "version": "16.2.1",
+    "version": "16.3.0",
     "description": "Slender typeface for code, from code.",
     "checkver": {
         "url": "https://github.com/be5invis/Iosevka/releases/latest",
         "re": ">Iosevka version (.*?)<"
     },
-    "url": "https://github.com/be5invis/Iosevka/releases/download/v16.2.1/ttf-iosevka-16.2.1.zip",
-    "hash": "24aed8ee9b8050fa7a07da71f55d81bcbd7a276caf5b9a12eafca228f356cd36",
+    "url": "https://github.com/be5invis/Iosevka/releases/download/v16.3.0/ttf-iosevka-16.3.0.zip",
+    "hash": "3d9e7c7f258a8bb00fda1baf24f3f7b6e427929fe38927a9a85cf837e983a227",
     "autoupdate": {
         "url": "https://github.com/be5invis/Iosevka/releases/download/v$version/ttf-iosevka-$version.zip"
     },
