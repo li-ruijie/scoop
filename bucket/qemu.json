@@ -1,16 +1,16 @@
 {
-    "version": "7.2.0-rc3",
+    "version": "7.2.0-rc4",
     "description": "A generic and open source machine emulator and virtualizer.",
     "homepage": "https://qemu.weilnetz.de/",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://qemu.weilnetz.de/w64/qemu-w64-setup-20221130.exe#/dl.7z",
-            "hash": "66f80e34baa5d7a9fcc506704810fb7006e8a0aafac24fc6f76dbf05528c91f9"
+            "url": "https://qemu.weilnetz.de/w64/qemu-w64-setup-20221208.exe#/dl.7z",
+            "hash": "sha512:fa65a9e9ba5011607c26305c57342f7146466f9d274d7b3ede9d8b7b4938ac0482ac45e573152a69c07eddc579f47a565d90619113b51275be01f5427b059e7d"
         },
         "32bit": {
-            "url": "https://qemu.weilnetz.de/w32/qemu-w32-setup-20221130.exe#/dl.7z",
-            "hash": "2425e75e7de2a75e28584326056450fb8f932e72dadbd9c66f3c42a283ed80f4"
+            "url": "https://qemu.weilnetz.de/w32/qemu-w32-setup-20221208.exe#/dl.7z",
+            "hash": "sha512:e309efe4242a9a5767528bbeab05a5876c457a4d0d0b78b0cde5a3c677a7d33ad561366bc3162187c5dc591ace9ae7968664edbbaac8e5860bc72094659dff1c"
         }
     },
     "checkver": "<strong>(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})</strong>: New QEMU installers \\((?<version>[\\d.a-z\\-]+)\\)",
