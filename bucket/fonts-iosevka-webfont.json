@@ -1,13 +1,13 @@
 {
     "homepage": "https://github.com/be5invis/Iosevka",
-    "version": "17.0.1",
+    "version": "17.0.2",
     "description": "Slender typeface for code, from code.",
     "checkver": {
         "url": "https://github.com/be5invis/Iosevka/releases/latest",
         "re": ">Iosevka version (.*?)<"
     },
-    "url": "https://github.com/be5invis/Iosevka/releases/download/v17.0.1/webfont-iosevka-17.0.1.zip",
-    "hash": "22017bf5b55abc4bf681fe173d419ea546da8814d96863ed1ce7648e23458e93",
+    "url": "https://github.com/be5invis/Iosevka/releases/download/v17.0.2/webfont-iosevka-17.0.2.zip",
+    "hash": "69a89788a2801d85045e1492489491a5df9e192ebbd3035748ea9ae9071fe84a",
     "autoupdate": {
         "url": "https://github.com/be5invis/Iosevka/releases/download/v$version/webfont-iosevka-$version.zip"
     },
