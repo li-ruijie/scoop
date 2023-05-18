@@ -24,7 +24,7 @@
     ],
     "checkver": {
         "url": "https://download.imagemagick.org/ImageMagick/download/binaries/",
-        "regex": "ImageMagick-((\\d+\\.)+(\\d+))-portable-Q16-x64.zip",
+        "regex": "ImageMagick-((\\d+\\.)+(\\d+)-\\d+)-portable-Q16-x64.zip",
         "reverse": true
     },
     "autoupdate": {
