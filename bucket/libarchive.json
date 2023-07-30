@@ -2,11 +2,11 @@
     "description": "Multi-format archive and compression library",
     "homepage": "https://www.libarchive.org/",
     "license": "GPL-3.0-only",
-    "version": "3.6.0",
+    "version": "3.4.3",
     "architecture": {
         "64bit": {
-            "url": "https://www.libarchive.org/downloads/libarchive-v3.6.0-win64.zip",
-            "hash": "1d472d20bf416febb0073973bc941a1878fdcbda264b815893c266c65205c09f"
+            "url": "https://www.libarchive.org/downloads/libarchive-v3.4.3-win64.zip",
+            "hash": "b4fad50d65cf1d1f5574734e30edccbfbcb4c9060f9bdb010c303e81d2f48f8a"
         }
     },
     "checkver": {
