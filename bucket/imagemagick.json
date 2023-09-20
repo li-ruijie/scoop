@@ -1,10 +1,10 @@
 {
-    "version": "7.1.1-16",
+    "version": "7.1.1-17",
     "description": "Create, edit, compose, and convert 200+ of bitmap images formats.",
     "homepage": "https://imagemagick.org/",
     "license": "ImageMagick",
-    "url": "https://download.imagemagick.org/ImageMagick/download/binaries/ImageMagick-7.1.1-16-portable-Q16-x64.zip",
-    "hash": "2c129bdaad5d67e96e11b01293352826dcfc843011c28ce44de7ecac18296a79",
+    "url": "https://download.imagemagick.org/ImageMagick/download/binaries/ImageMagick-7.1.1-17-portable-Q16-x64.zip",
+    "hash": "55f15a7a84fc54c08c7fafb17b9b0b96f712216082dc66d18c0ef76def0943e2",
     "bin": [
         "compare.exe",
         "composite.exe",
