@@ -2,11 +2,11 @@
     "homepage": "https://www.vim.org",
     "description": "A highly configurable text editor for efficiently creating and changing any kind of text.",
     "license": "Vim",
-    "version": "9.0.2184",
+    "version": "9.0.2185",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/vim/vim-win32-installer/releases/download/v9.0.2184/gvim_9.0.2184_x64.zip",
-            "hash": "5c34eec2e6c2b669c78d1fa2481284916648a3bea0cea6b84aa7345029ad510c"
+            "url": "https://github.com/vim/vim-win32-installer/releases/download/v9.0.2185/gvim_9.0.2185_x64.zip",
+            "hash": "8f06284349f5aee5a814f85ca159640badf6b14d631b790caf13c586258d8162"
         }
     },
     "extract_dir": "vim\\vim90",
