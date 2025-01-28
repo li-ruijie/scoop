@@ -1,10 +1,10 @@
 {
     "homepage": "https://www.r-project.org",
     "description": "A free software environment for statistical computing and graphics.",
-    "version": "2025-01-27",
+    "version": "2025-01-28",
     "license": "GPL-2.0-only",
     "url": "https://cloud.r-project.org/bin/windows/base/R-devel-win.exe",
-    "hash": "fc151a896e443bbee34403f9dfc141aa1b6d178da9189512e9969fa1c40b01b5",
+    "hash": "a5986d6cec04e9895f17dda4c8a1ced156c70bb60b0ff92bed367c8cc0aeae1f",
     "innosetup": true,
     "architecture": {
         "64bit": {
