@@ -1,13 +1,13 @@
 {
     "homepage": "https://github.com/ggml-org/llama.cpp",
-    "version": "b4924",
+    "version": "b4925",
     "description": "Inference of Meta's LLaMA model (and others) in pure C/C++",
     "checkver": {
         "url": "https://github.com/ggml-org/llama.cpp/releases/latest",
         "re": "llama.cpp/releases/tag/(.*?)&.*?data-view-component=\"true\""
     },
-    "url": "https://github.com/ggml-org/llama.cpp/releases/download/b4924/llama-b4924-bin-win-avx2-x64.zip",
-    "hash": "116f72b09e524875109a7655a47333c769380674d3fcfdb6f7a5da3f13c1aa2e",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/download/b4925/llama-b4925-bin-win-avx2-x64.zip",
+    "hash": "94d8c5402f5453a6a723562a6116f6581a1a00b3053a0f39dc960f02a17eaac6",
     "autoupdate": {
         "url": "https://github.com/ggml-org/llama.cpp/releases/download/$version/llama-$version-bin-win-avx2-x64.zip"
     }
