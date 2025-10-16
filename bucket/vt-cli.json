@@ -1,16 +1,16 @@
 {
     "homepage": "https://github.com/VirusTotal/vt-cli",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "description": "VirusTotal Command Line Interface",
     "checkver": "github",
     "architecture": {
         "64bit": {
             "url": "https://github.com/VirusTotal/vt-cli/releases/latest/download/Windows64.zip",
-            "hash": "469b7e7f4d5ccfce12a0576a82822ecd431e852052517af28acf67d93609fd14"
+            "hash": "f95cde94fe7146ea9712d1ccad9ba9681505e92eb474d0c3e7f85a5f044963f8"
         },
         "32bit": {
             "url": "https://github.com/VirusTotal/vt-cli/releases/latest/download/Windows32.zip",
-            "hash": "5bcd4e85e9925f80bd1e02e7eaab50ed37c1999cfe59d144ab7c5b5a1a534b4e"
+            "hash": "80309c8ef9a446b901578f2be33f5cd420516ecae8233dcea38b07e470a9d629"
         }
     },
     "autoupdate": {
