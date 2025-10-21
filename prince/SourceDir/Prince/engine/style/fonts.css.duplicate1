@@ -1,0 +1,307 @@
+/*
+    Prince - Fonts stylesheet
+    https://www.princexml.com
+*/
+
+/* standard "serif" font family */
+
+@font-face {
+    font-family: "Prince Fallback"; /* fallback font */
+    src: url("../fonts/prince-fallback.ttf")
+}
+
+@font-face {
+    font-family: serif; /* Emoji */
+    src: prince-lookup("JoyPixels"), prince-lookup("Noto Color Emoji")
+}
+
+@font-face {
+    font-family: serif; /* last resort font */
+    src: prince-lookup("Arial Unicode MS")
+}
+
+@font-face {
+    font-family: serif; /* Hebrew */
+    src: prince-lookup("Noto Serif Hebrew")
+}
+
+@font-face {
+    font-family: serif; /* Arabic */
+    src: prince-lookup("Noto Naskh Arabic")
+}
+
+@font-face {
+    font-family: serif; /* Thai */
+    src: prince-lookup("Angsana New"), prince-lookup("Noto Serif Thai")
+}
+
+@font-face {
+    font-family: serif; /* Lao */
+    src: prince-lookup("Noto Serif Lao")
+}
+
+@font-face {
+    font-family: serif; /* Sinhala */
+    src: prince-lookup("Noto Serif Sinhala")
+}
+
+@font-face {
+    font-family: serif; /* Oriya */
+    src: prince-lookup("Noto Serif Oriya")
+}
+
+@font-face {
+    font-family: serif; /* Malayalam */
+    src: prince-lookup("Kartika"), prince-lookup("Noto Serif Malayalam")
+}
+
+@font-face {
+    font-family: serif; /* Kannada */
+    src: prince-lookup("Tunga"), prince-lookup("Noto Serif Kannada")
+}
+
+@font-face {
+    font-family: serif; /* Telugu */
+    src: prince-lookup("Gautami"), prince-lookup("Noto Serif Telugu")
+}
+
+@font-face {
+    font-family: serif; /* Tamil */
+    src: prince-lookup("Latha"), prince-lookup("Noto Serif Tamil")
+}
+
+@font-face {
+    font-family: serif; /* Gujarati */
+    src: prince-lookup("Shruti"), prince-lookup("Noto Serif Gujarati")
+}
+
+@font-face {
+    font-family: serif; /* Gurmukhi */
+    src: prince-lookup("Raavi"), prince-lookup("Noto Serif Gurmukhi")
+}
+
+@font-face {
+    font-family: serif; /* Bengali */
+    src: prince-lookup("Vrinda"), prince-lookup("Noto Serif Bengali")
+}
+
+@font-face {
+    font-family: serif; /* Devanagari / Hindi */
+    src: prince-lookup("Mangal"), prince-lookup("Noto Serif Devanagari")
+}
+
+@font-face {
+    font-family: serif; /* Khmer */
+    src: prince-lookup("Leelawadee UI"), prince-lookup("Khmer UI"), prince-lookup("Noto Serif Khmer")
+}
+
+@font-face {
+    font-family: serif; /* Myanmar */
+    src: prince-lookup("Noto Serif Myanmar"), prince-lookup("Myanmar Text")
+}
+
+@font-face {
+    font-family: serif; /* Korean, fallback */
+    src: prince-lookup("Batang"), prince-lookup("Malgun Gothic"), prince-lookup("Noto Serif CJK KR")
+}
+
+@font-face {
+    font-family: serif; /* Japanese, fallback */
+    src: prince-lookup("MS Mincho"), prince-lookup("Yu Gothic"), prince-lookup("Noto Serif CJK JP")
+}
+
+@font-face {
+    font-family: serif; /* Chinese, simplified */
+    src: prince-lookup("SimSun"), prince-lookup("Noto Serif CJK SC")
+}
+
+@font-face {
+    font-family: serif; /* Chinese, traditional (TW) */
+    prince-font-lang: zh-TW zh-Hant;
+    src: prince-lookup("Noto Serif CJK TC"), prince-lookup("MingLiU")
+}
+
+@font-face {
+    font-family: serif; /* Chinese, traditional (HK) */
+    prince-font-lang: zh-HK zh-Hant;
+    src: prince-lookup("Noto Serif CJK HK"), prince-lookup("MingLiU")
+}
+
+@font-face {
+    font-family: serif; /* Korean */
+    prince-font-lang: ko ko-KR;
+    src: prince-lookup("Batang"), prince-lookup("Malgun Gothic"), prince-lookup("Noto Serif CJK KR")
+}
+
+@font-face {
+    font-family: serif; /* Japanese */
+    prince-font-lang: ja ja-JP;
+    src: prince-lookup("MS Mincho"), prince-lookup("Yu Gothic"), prince-lookup("Noto Serif CJK JP")
+}
+
+@font-face {
+    font-family: serif; /* Symbols */
+    src: prince-lookup("Segoe UI Symbol")
+}
+
+@font-face {
+    font-family: serif; /* Symbols */
+    src: prince-lookup("Symbol")
+}
+
+@font-face {
+    font-family: serif; /* Latin / Greek / Cyrillic */
+    src: prince-lookup("Times New Roman"), prince-lookup("Noto Serif")
+}
+
+/* standard "sans-serif" font family */
+
+@font-face {
+    font-family: sans-serif; /* Hebrew */
+    src: prince-lookup("Noto Sans Hebrew")
+}
+
+@font-face {
+    font-family: sans-serif; /* Syriac */
+    src: prince-lookup("Noto Sans Syriac")
+}
+
+@font-face {
+    font-family: sans-serif; /* Arabic */
+    src: prince-lookup("Noto Sans Arabic")
+}
+
+@font-face {
+    font-family: sans-serif; /* Thai */
+    src: prince-lookup("Noto Sans Thai")
+}
+
+@font-face {
+    font-family: sans-serif; /* Lao */
+    src: prince-lookup("Noto Sans Lao")
+}
+
+@font-face {
+    font-family: sans-serif; /* Sinhala */
+    src: prince-lookup("Noto Sans Sinhala")
+}
+
+@font-face {
+    font-family: sans-serif; /* Oriya */
+    src: prince-lookup("Noto Sans Oriya")
+}
+
+@font-face {
+    font-family: sans-serif; /* Malayalam */
+    src: prince-lookup("Noto Sans Malayalam")
+}
+
+@font-face {
+    font-family: sans-serif; /* Kannada */
+    src: prince-lookup("Noto Sans Kannada")
+}
+
+@font-face {
+    font-family: sans-serif; /* Telugu */
+    src: prince-lookup("Noto Sans Telugu")
+}
+
+@font-face {
+    font-family: sans-serif; /* Tamil */
+    src: prince-lookup("Noto Sans Tamil")
+}
+
+@font-face {
+    font-family: sans-serif; /* Gujarati */
+    src: prince-lookup("Noto Sans Gujarati")
+}
+
+@font-face {
+    font-family: sans-serif; /* Gurmukhi / Punjabi */
+    src: prince-lookup("Noto Sans Gurmukhi")
+}
+
+@font-face {
+    font-family: sans-serif; /* Bengali */
+    src: prince-lookup("Noto Sans Bengali")
+}
+
+@font-face {
+    font-family: sans-serif; /* Devanagari / Hindi */
+    src: prince-lookup("Noto Sans Devanagari")
+}
+
+@font-face {
+    font-family: sans-serif; /* Khmer */
+    src: prince-lookup("Noto Sans Khmer")
+}
+
+@font-face {
+    font-family: sans-serif; /* Myanmar */
+    src: prince-lookup("Myanmar Text"), prince-lookup("Padauk"), prince-lookup("Myanmar Sagar"), prince-lookup("Noto Sans Myanmar")
+}
+
+@font-face {
+    font-family: sans-serif; /* Korean, fallback */
+    src: prince-lookup("Dotum"), prince-lookup("Noto Sans CJK KR")
+}
+
+@font-face {
+    font-family: sans-serif; /* Japanese, fallback */
+    src: prince-lookup("MS Gothic"), prince-lookup("Noto Sans CJK JP")
+}
+
+@font-face {
+    font-family: sans-serif; /* Chinese, simplified */
+    src: prince-lookup("Microsoft YaHei"), prince-lookup("Noto Sans CJK SC")
+}
+
+@font-face {
+    font-family: sans-serif; /* Chinese, traditional (TW) */
+    prince-font-lang: zh-TW zh-Hant;
+    src: prince-lookup("Noto Sans CJK TC"), prince-lookup("Microsoft JhengHei")
+}
+
+@font-face {
+    font-family: sans-serif; /* Chinese, traditional (HK) */
+    prince-font-lang: zh-HK zh-Hant;
+    src: prince-lookup("Noto Sans CJK HK"), prince-lookup("Microsoft JhengHei")
+}
+
+@font-face {
+    font-family: sans-serif; /* Korean */
+    prince-font-lang: ko ko-KR;
+    src: prince-lookup("Dotum"), prince-lookup("Noto Sans CJK KR")
+}
+
+@font-face {
+    font-family: sans-serif; /* Japanese */
+    prince-font-lang: ja ja-JP;
+    src: prince-lookup("MS Gothic"), prince-lookup("Noto Sans CJK JP")
+}
+
+@font-face {
+    font-family: sans-serif; /* Latin / Greek / Cyrillic */
+    src: prince-lookup("Arial"), prince-lookup("Noto Sans")
+}
+
+/* standard "monospace" font family */
+
+@font-face {
+    font-family: monospace;
+    src: prince-lookup("Courier New"), prince-lookup("Noto Sans Mono")
+}
+
+/* standard "cursive" font family */
+
+@font-face {
+    font-family: cursive;
+    src: prince-lookup("Comic Sans MS")
+}
+
+/* standard "fantasy" font family */
+
+@font-face {
+    font-family: fantasy;
+    src: prince-lookup("Comic Sans MS")
+}

@@ -1,0 +1,50 @@
+Licenses for open source libraries used by Prince can be found
+in the following locations in the installation package:
+
+aom                     contrib/aom
+bdwgc                   contrib/bdwgc
+cairo                   contrib/cairo
+curl                    contrib/curl
+Fontconfig              contrib/fontconfig
+FreeType                contrib/freetype
+GIFLIB                  contrib/giflib
+Little CMS              contrib/lcms
+libatomic_ops           contrib/libatomic_ops
+libavif                 contrib/libavif
+libdatrie               contrib/libdatrie
+libjpeg-turbo           contrib/libjpeg-turbo
+libpng                  contrib/libpng
+libthai                 contrib/libthai
+libtiff                 contrib/libtiff
+libwebp                 contrib/libwebp
+libxml2                 contrib/libxml2
+Mercury                 contrib/mercury
+Mercury-Cairo           contrib/mercury_cairo
+mimalloc                contrib/mimalloc
+musl                    contrib/musl
+OpenSSL                 contrib/openssl
+pixman                  contrib/pixman
+Rust packages           contrib/rust
+zlib                    contrib/zlib
+
+The following libraries are also used on Windows:
+
+libiconv                contrib/libiconv
+MinGW-w64 runtime       contrib/mingw-w64
+winpthreads             contrib/winpthreads
+
+Acknowledgements for use of FreeType:
+
+    Portions of this software are © The FreeType Project (www.freetype.org).
+    All rights reserved.
+
+Acknowledgements for use of libjpeg:
+
+    This software is based in part on the work of the Independent JPEG Group
+
+Acknowledgements for use of OpenSSL 1.0.x (where applicable):
+
+    This product includes software developed by the OpenSSL Project
+    for use in the OpenSSL Toolkit. (http://www.openssl.org/)
+    This product includes cryptographic software written by
+    Eric Young (eay@cryptsoft.com)
