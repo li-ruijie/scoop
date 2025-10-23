@@ -1,10 +1,10 @@
 {
     "homepage": "https://www.r-project.org",
     "description": "A free software environment for statistical computing and graphics.",
-    "version": "2025-10-21",
+    "version": "2025-10-22",
     "license": "GPL-2.0-only",
     "url": "https://cloud.r-project.org/bin/windows/base/R-devel-win.exe",
-    "hash": "29a0ec6f1b6ea5ccf9aa7190e128a780ba0e464ec7665323cd63031d5efae3db",
+    "hash": "02d45e95f7cde3b69e39b5670ca4b3f671c275d4e0c52b0cf7853360f4176b95",
     "innosetup": true,
     "architecture": {
         "64bit": {
@@ -67,9 +67,6 @@
         "regex": "Last build: (\\d{4}-\\d{2}-\\d{2})"
     },
     "autoupdate": {
-        "url": "https://cloud.r-project.org/bin/windows/base/R-devel-win.exe",
-        "hash": {
-            "url": "$baseurl/md5sum.txt.R-devel"
-        }
+        "url": "https://cloud.r-project.org/bin/windows/base/R-devel-win.exe"
     }
 }
