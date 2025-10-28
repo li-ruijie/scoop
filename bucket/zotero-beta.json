@@ -18,11 +18,10 @@
         }
     },
     "extract_dir": "core",
-    "bin": "zotero.exe",
     "shortcuts": [
         [
             "zotero.exe",
-            "Zotero"
+            "Zotero Beta"
         ]
     ],
     "checkver": {
