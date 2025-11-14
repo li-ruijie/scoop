@@ -1,0 +1,24 @@
+{
+    "homepage": "https://github.com/adobe-fonts/source-han-sans",
+    "version": "2.005R",
+    "description": "Source Han Sans is a set of OpenType/CFF Pan-CJK fonts.",
+    "checkver": {
+        "url": "https://github.com/adobe-fonts/source-han-sans/releases/latest",
+        "re": "tree/(.*?)\""
+    },
+    "url": "https://github.com/adobe-fonts/source-han-sans/archive/2.005R.zip#/dl.zi_",
+    "hash": "d58dd85410cc044e6ab3ac717664145ff54d55fc1a2f968d27576093836c21be",
+    "autoupdate": {
+        "url": "https://github.com/adobe-fonts/source-han-sans/archive/$version.zip#/dl.zi_"
+    },
+    "installer": {
+        "script": [
+            "mkdir \"$dir\\tmp\" > $null",
+            "7z e -o\"$dir\\tmp\" -aoa \"$dir\\$fname\" > $null",
+            "7z e -o\"$dir\\tmp\" -aoa \"$dir\\tmp\\*zip\" > $null",
+            "Get-ChildItem \"$dir\\tmp\" -Include *.otf,*.ttc,*.txt,*.pdf,*.xlsx,*.md -Recurse | Move-Item -Destination \"$dir\" > $null",
+            "Remove-Item \"$dir\\tmp\" -Recurse -Force > $null",
+            "Remove-Item \"$dir\\$fname\" > $null"
+        ]
+    }
+}
