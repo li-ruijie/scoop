@@ -1,0 +1,63 @@
+name: Update Bucket
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Run hourly
+  workflow_dispatch:      # Manual trigger
+
+jobs:
+  update:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Clone Scoop for checkver script
+        run: git clone https://github.com/ScoopInstaller/Scoop.git --depth 1 "$RUNNER_TEMP/scoop-bin"
+        shell: bash
+
+      - name: Run checkver on all manifests
+        shell: bash
+        run: |
+          pwsh -NoProfile -Command '
+            $ErrorActionPreference = "Stop"
+            $scoopBin = Join-Path $env:RUNNER_TEMP "scoop-bin"
+            & "$scoopBin/bin/checkver.ps1" -Dir bucket -Update
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          ' 2>&1
+
+      - name: Commit and push changes
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          changed=false
+          for f in $(git diff --name-only -- bucket/); do
+            app=$(basename "$f" .json)
+            version=$(python -c "import json,sys;print(json.load(open(sys.argv[1]))['version'])" "$f")
+            git add "$f"
+            git commit -m "$app: Update to version $version"
+            changed=true
+          done
+          if [ "$changed" = true ]; then
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Truncate history if over 1000 commits
+        shell: bash
+        run: |
+          count=$(git rev-list --count HEAD)
+          if [ "$count" -gt 1000 ]; then
+            echo "Commit count ($count) exceeds 1000, truncating..."
+            cutoff=$(git rev-list --skip=999 --max-count=1 HEAD)
+            new_root=$(git commit-tree "${cutoff}^{tree}" -m "$(git log -1 --format=%B "$cutoff")")
+            git rebase --onto "$new_root" "$cutoff"
+            git push --force
+            echo "Truncated to $(git rev-list --count HEAD) commits"
+          else
+            echo "Commit count ($count) is within limit"
+          fi
