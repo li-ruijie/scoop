@@ -1,0 +1,23 @@
+{
+    "description": "Multi-format archive and compression library",
+    "homepage": "https://www.libarchive.org/",
+    "license": "BSD-2-Clause",
+    "version": "3.5.3",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/libarchive/libarchive/releases/download/v3.5.3/libarchive-v3.5.3-win64.zip",
+            "hash": "81c45c31a31a7b49809b3625594c28a1afbcc18faa6ee1d2ab4e4328ba8ef736"
+        }
+    },
+    "checkver": {
+        "url": "https://api.github.com/repos/libarchive/libarchive/releases?per_page=100",
+        "re": "libarchive-v([\\d.]+)-win64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/libarchive/libarchive/releases/download/v$version/libarchive-v$version-win64.zip"
+            }
+        }
+    }
+}

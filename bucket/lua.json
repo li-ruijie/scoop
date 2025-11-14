@@ -1,0 +1,31 @@
+{
+    "homepage": "https://sourceforge.net/projects/luabinaries/",
+    "version": "5.5.0",
+    "description": "Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description.",
+    "license": "MIT",
+    "checkver": {
+        "url": "http://luabinaries.sourceforge.net/download.html",
+        "re": "lua-([\\d.]+)_Win64"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.sourceforge.net/project/luabinaries/5.5.0/Tools%20Executables/lua-5.5.0_Win64_bin.zip",
+            "hash": "sha1:c795954a3953848b9aa30b2320748766569a16cc"
+        },
+        "32bit": {
+            "url": "https://downloads.sourceforge.net/project/luabinaries/5.5.0/Tools%20Executables/lua-5.5.0_Win32_bin.zip",
+            "hash": "sha1:9fce32b2a4fe7dfd463fff757e7af22d9a6780c1"
+        }
+    },
+    "env_add_path": "..\\current",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.sourceforge.net/project/luabinaries/$version/Tools%20Executables/lua-$version_Win64_bin.zip"
+            },
+            "32bit": {
+                "url": "https://downloads.sourceforge.net/project/luabinaries/$version/Tools%20Executables/lua-$version_Win32_bin.zip"
+            }
+        }
+    }
+}
