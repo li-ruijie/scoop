@@ -4,7 +4,7 @@
     "version": "18.0",
     "architecture": {
         "64bit": {
-            "url": "https://www.dropbox.com/scl/fi/eozbhn0xtne3hms02e10g/stata18-win.7z?rlkey=8tb20dikqy0562kkb8k4wsee1&st=pn6hm0wq&dl=1",
+            "url": "https://www.dropbox.com/scl/fi/eozbhn0xtne3hms02e10g/stata18-win.7z?rlkey=8tb20dikqy0562kkb8k4wsee1&st=pn6hm0wq&dl=1#/stata18-win.7zc",
             "hash": "sha512:73be83886f38436bd5a6688a5d7c779a69ebc9b27c3760da24d154fe2ebc1274050d0b417b9533f49d54dab23b64ff3b38b69db64f62144f1f92a63b84be123c"
         }
     },
@@ -15,7 +15,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.dropbox.com/scl/fi/eozbhn0xtne3hms02e10g/stata18-win.7z?rlkey=8tb20dikqy0562kkb8k4wsee1&st=pn6hm0wq&dl=1"
+                "url": "https://www.dropbox.com/scl/fi/eozbhn0xtne3hms02e10g/stata18-win.7z?rlkey=8tb20dikqy0562kkb8k4wsee1&st=pn6hm0wq&dl=1#/stata18-win.7zc"
             }
         },
         "hash": {

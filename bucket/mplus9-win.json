@@ -4,7 +4,7 @@
     "version": "9.0",
     "architecture": {
         "64bit": {
-            "url": "https://www.dropbox.com/scl/fi/zeoxl7fnflwrb2c6gjf0f/mplus9-linux.7z?rlkey=jb8cl5lt6x08a43t881z7bkfn&st=6vvp23ei&dl=1",
+            "url": "https://www.dropbox.com/scl/fi/zeoxl7fnflwrb2c6gjf0f/mplus9-linux.7z?rlkey=jb8cl5lt6x08a43t881z7bkfn&st=6vvp23ei&dl=1#/mplus9-win.7zc",
             "hash": "sha512:8f47e340610aca0d0312b6d19ab198a5648b12f74d212920c79c2a5342c7ce731aa6c6968f221d51e311466180e4d078c67a30dd6cd71be7c586595da64c7cab"
         }
     },
@@ -15,7 +15,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.dropbox.com/scl/fi/zeoxl7fnflwrb2c6gjf0f/mplus9-linux.7z?rlkey=jb8cl5lt6x08a43t881z7bkfn&st=6vvp23ei&dl=1"
+                "url": "https://www.dropbox.com/scl/fi/zeoxl7fnflwrb2c6gjf0f/mplus9-linux.7z?rlkey=jb8cl5lt6x08a43t881z7bkfn&st=6vvp23ei&dl=1#/mplus9-win.7zc"
             }
         },
         "hash": {
