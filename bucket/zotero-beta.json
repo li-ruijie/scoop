@@ -27,7 +27,7 @@
     "checkver": {
         "script": [
             "$detail = try { Invoke-WebRequest 'https://www.zotero.org/download/client/dl?channel=beta&platform=win-x64' -MaximumRedirection 0 -ErrorAction Ignore } catch { $_.Exception.Response }",
-            "$url_noe = $detail.Headers.Location.OriginalString -Replace('^.*?beta/(.*?)/.*','$1')",
+            "$url_noe = $detail.Headers.Location -Replace('^.*?beta/(.*?)/.*','$1')",
             "return [System.Uri]::UnescapeDataString($url_noe) + '###' + $url_noe"
         ],
         "regex": "(?<version>.*)###(?<noe>.*)"
