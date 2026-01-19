@@ -1,0 +1,35 @@
+name: Update Bucket
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Run hourly
+  workflow_dispatch:      # Manual trigger
+
+jobs:
+  update:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Clone Scoop for checkver script
+        run: git clone https://github.com/ScoopInstaller/Scoop.git --depth 1 scoop-bin
+
+      - name: Run checkver on all manifests
+        run: |
+          Get-ChildItem -Path bucket -Filter *.json | ForEach-Object -Parallel {
+            & .\scoop-bin\bin\checkver.ps1 -Dir bucket -App $_.BaseName -Update
+          } -ThrottleLimit 6
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          $changes = git diff --cached --quiet; $hasChanges = $LASTEXITCODE -ne 0
+          if ($hasChanges) {
+            git commit -m "Auto-update manifests"
+            git push
+          } else {
+            Write-Host "No changes to commit"
+          }
