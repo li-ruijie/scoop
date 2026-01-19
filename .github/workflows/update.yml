@@ -19,19 +19,12 @@ jobs:
       - name: Run checkver on all manifests
         shell: bash
         run: |
-          set +e
           pwsh -NoProfile -Command '
-            $ErrorActionPreference = "Continue"
+            $ErrorActionPreference = "Stop"
             $scoopBin = Join-Path $env:RUNNER_TEMP "scoop-bin"
             & "$scoopBin/bin/checkver.ps1" -Dir bucket -Update
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           ' 2>&1
-          exit_code=$?
-          # Exit code 1 is normal (some manifests may fail to check)
-          # Only fail on unexpected errors
-          if [ $exit_code -gt 1 ]; then
-            echo "::error::checkver failed with exit code $exit_code"
-            exit 1
-          fi
 
       - name: Commit and push changes
         shell: bash
