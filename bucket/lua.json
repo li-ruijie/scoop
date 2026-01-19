@@ -2,6 +2,7 @@
     "homepage": "https://sourceforge.net/projects/luabinaries/",
     "version": "5.4.2",
     "description": "Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description.",
+    "license": "MIT",
     "checkver": {
         "url": "http://luabinaries.sourceforge.net/download.html",
         "re": "lua-([\\d.]+)_Win64"

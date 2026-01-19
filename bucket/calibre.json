@@ -8,11 +8,6 @@
             "url": "https://github.com/kovidgoyal/calibre/releases/download/v8.16.2/calibre-64bit-8.16.2.msi",
             "hash": "7f052a6027d2331ce214cd4cbf7d8b12125b39a420309745cc6974cf3a000d50",
             "extract_dir": "PFiles\\Calibre2"
-        },
-        "32bit": {
-            "url": "https://github.com/kovidgoyal/calibre/releases/download/v5.44.0/calibre-5.44.0.msi",
-            "hash": "",
-            "extract_dir": "PFiles\\Calibre"
         }
     },
     "bin": [
@@ -59,7 +54,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/kovidgoyal/calibre/releases/download/v$version/calibre-64bit-$version.msi"
+                "url": "https://github.com/kovidgoyal/calibre/releases/download/v$version/calibre-64bit-$version.msi",
+                "hash": {
+                    "url": "$url.sha256"
+                }
             }
         }
     }
