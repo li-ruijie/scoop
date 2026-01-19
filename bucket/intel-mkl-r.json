@@ -9,11 +9,20 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://www.nuget.org/api/v2/package/intelmkl.redist.win-x64/2025.3.0.453#/intelmkl.redist.win-x64.2025.3.0.453.nupkg",
-            "hash": "a8da1d8e71f7f8eeec5eb9dccae035cf948b925ef469be4da07b76e2c0306275"
+            "url": [
+                "https://www.nuget.org/api/v2/package/intelmkl.redist.win-x64/2025.3.0.453#/intelmkl.redist.win-x64.2025.3.0.453.nupkg",
+                "https://www.nuget.org/api/v2/package/intelopenmp.redist.win/2025.3.1.761#/intelopenmp.redist.win.2025.3.1.761.nupkg"
+            ],
+            "hash": [
+                "a8da1d8e71f7f8eeec5eb9dccae035cf948b925ef469be4da07b76e2c0306275",
+                "f892cb1c53e2a2d8019a0822fd771d478e6e736edb2b6588b110ff88cd42e198"
+            ]
         }
     },
-    "extract_dir": "runtimes/win-x64/native",
+    "extract_dir": [
+        "runtimes/win-x64/native",
+        "runtimes/win-x64/native"
+    ],
     "post_install": [
         "$r_bin = \"$env:SCOOP_GLOBAL\\apps\\r\\current\\bin\\x64\"",
         "if (!(Test-Path $r_bin)) { throw \"R not found at $r_bin\" }",
@@ -50,7 +59,8 @@
         "$mkl_dlls = @('libimalloc.dll', 'mkl_avx2.2.dll', 'mkl_avx512.2.dll', 'mkl_core.2.dll',",
         "              'mkl_def.2.dll', 'mkl_intel_thread.2.dll', 'mkl_mc3.2.dll', 'mkl_rt.2.dll',",
         "              'mkl_sequential.2.dll', 'mkl_tbb_thread.2.dll', 'mkl_vml_avx2.2.dll',",
-        "              'mkl_vml_avx512.2.dll', 'mkl_vml_cmpt.2.dll', 'mkl_vml_def.2.dll', 'mkl_vml_mc3.2.dll')",
+        "              'mkl_vml_avx512.2.dll', 'mkl_vml_cmpt.2.dll', 'mkl_vml_def.2.dll', 'mkl_vml_mc3.2.dll',",
+        "              'libiomp5md.dll', 'libiomp5md_db.dll', 'libiompstubs5md.dll')",
         "",
         "foreach ($dll in $mkl_dlls) {",
         "    $path = \"$r_bin\\$dll\"",
