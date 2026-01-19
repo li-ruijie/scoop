@@ -16,10 +16,7 @@ jobs:
         run: git clone https://github.com/ScoopInstaller/Scoop.git --depth 1 scoop-bin
 
       - name: Run checkver on all manifests
-        run: |
-          Get-ChildItem -Path bucket -Filter *.json | ForEach-Object -Parallel {
-            & .\scoop-bin\bin\checkver.ps1 -Dir bucket -App $_.BaseName -Update
-          } -ThrottleLimit 6
+        run: .\scoop-bin\bin\checkver.ps1 -Dir bucket -Update
 
       - name: Commit and push changes
         run: |
