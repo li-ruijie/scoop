@@ -15,7 +15,7 @@
     },
     "extract_dir": "runtimes/win-x64/native",
     "post_install": [
-        "$r_bin = \"$env:SCOOP\\global\\apps\\r\\current\\bin\\x64\"",
+        "$r_bin = \"$env:SCOOP_GLOBAL\\apps\\r\\current\\bin\\x64\"",
         "if (!(Test-Path $r_bin)) { throw \"R not found at $r_bin\" }",
         "",
         "$backup_dir = \"$dir\\r_backup\"",
@@ -43,7 +43,7 @@
         "Write-Host \"`nIntel MKL installed for R. Backups saved to: $backup_dir\""
     ],
     "pre_uninstall": [
-        "$r_bin = \"$env:SCOOP\\global\\apps\\r\\current\\bin\\x64\"",
+        "$r_bin = \"$env:SCOOP_GLOBAL\\apps\\r\\current\\bin\\x64\"",
         "$backup_dir = \"$dir\\r_backup\"",
         "",
         "# Remove MKL DLLs from R",
@@ -74,7 +74,7 @@
         "Write-Host \"`nOriginal R BLAS/LAPACK restored.\""
     ],
     "notes": [
-        "MKL has been installed to R at: $env:SCOOP\\global\\apps\\r\\current\\bin\\x64",
+        "MKL has been installed to R at: $env:SCOOP_GLOBAL\\apps\\r\\current\\bin\\x64",
         "Original Rblas.dll and Rlapack.dll backed up to: $dir\\r_backup",
         "Uninstalling this package will restore the original R libraries."
     ],
