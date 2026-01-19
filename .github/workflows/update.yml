@@ -17,11 +17,13 @@ jobs:
         shell: bash
 
       - name: Run checkver on all manifests
+        shell: bash
         run: |
-          $scoopBin = Join-Path $env:RUNNER_TEMP "scoop-bin"
-          $env:GIT_REDIRECT_STDERR = '2>&1'
-          & "$scoopBin/bin/checkver.ps1" -Dir bucket -Update
-          exit 0
+          pwsh -NoProfile -Command '
+            $ErrorActionPreference = "Continue"
+            $scoopBin = Join-Path $env:RUNNER_TEMP "scoop-bin"
+            & "$scoopBin/bin/checkver.ps1" -Dir bucket -Update 2>&1
+          ' || true
 
       - name: Commit and push changes
         shell: bash
