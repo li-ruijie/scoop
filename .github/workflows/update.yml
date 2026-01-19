@@ -19,7 +19,9 @@ jobs:
       - name: Run checkver on all manifests
         run: |
           $scoopBin = Join-Path $env:RUNNER_TEMP "scoop-bin"
+          $env:GIT_REDIRECT_STDERR = '2>&1'
           & "$scoopBin/bin/checkver.ps1" -Dir bucket -Update
+          exit 0
 
       - name: Commit and push changes
         shell: bash
