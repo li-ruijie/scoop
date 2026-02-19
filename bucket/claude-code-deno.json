@@ -1,0 +1,36 @@
+{
+    "version": "2.1.47",
+    "description": "Claude Code (Deno) - Anthropic's CLI for Claude (Deno runtime)",
+    "homepage": "https://github.com/anthropics/claude-code",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/li-ruijie/claude-code/releases/download/claude-code-v2.1.47-deno-v2.6.10/claude-code-v2.1.47-deno-v2.6.10-win-x64.zip",
+            "hash": "0a017335a18175ae375872ce9519e455bf03f92dd14caad4651d08df4da761e0",
+            "extract_dir": "claude-code"
+        },
+        "arm64": {
+            "url": "https://github.com/li-ruijie/claude-code/releases/download/claude-code-v2.1.47-deno-v2.6.10/claude-code-v2.1.47-deno-v2.6.10-win-arm64.zip",
+            "hash": "f47b668e2ae857dad63ff8562a600c2fb06a2fccb21703a14617ad156c65d399",
+            "extract_dir": "claude-code"
+        }
+    },
+    "bin": "claude.cmd",
+    "checkver": {
+        "url": "https://api.github.com/repos/li-ruijie/claude-code/releases?per_page=100",
+        "regex": "claude-code-v([\\d.]+)-deno-v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/li-ruijie/claude-code/releases/download/claude-code-v$version-deno-v$match2/claude-code-v$version-deno-v$match2-win-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/li-ruijie/claude-code/releases/download/claude-code-v$version-deno-v$match2/claude-code-v$version-deno-v$match2-win-arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/li-ruijie/claude-code/releases/download/claude-code-v$version-deno-v$match2/SHA256SUMS.txt",
+            "regex": "([a-fA-F0-9]{64})\\s+$basename"
+        }
+    }
+}
