@@ -1,16 +1,16 @@
 {
-    "version": "2.1.47",
+    "version": "0",
     "description": "Claude Code - Anthropic's CLI for Claude (Node.js runtime)",
     "homepage": "https://github.com/anthropics/claude-code",
     "architecture": {
         "64bit": {
             "url": "https://github.com/li-ruijie/claude-code/releases/download/claude-code-v2.1.47-node-v24.13.1/claude-code-v2.1.47-node-v24.13.1-win-x64.zip",
-            "hash": "24081d16e26b3383529ea99a81318e521c98b5dde3dffbdc44790ec0e8b7d098",
+            "hash": "",
             "extract_dir": "claude-code"
         },
         "arm64": {
             "url": "https://github.com/li-ruijie/claude-code/releases/download/claude-code-v2.1.47-node-v24.13.1/claude-code-v2.1.47-node-v24.13.1-win-arm64.zip",
-            "hash": "4f60a7cd964001aae0ff18b00eac4b1a99d936f0844a3168832a6f2fac21e503",
+            "hash": "",
             "extract_dir": "claude-code"
         }
     },
