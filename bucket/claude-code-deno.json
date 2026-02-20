@@ -1,16 +1,16 @@
 {
-    "version": "2.1.47",
+    "version": "0",
     "description": "Claude Code (Deno) - Anthropic's CLI for Claude (Deno runtime)",
     "homepage": "https://github.com/anthropics/claude-code",
     "architecture": {
         "64bit": {
             "url": "https://github.com/li-ruijie/claude-code/releases/download/claude-code-v2.1.47-deno-v2.6.10/claude-code-v2.1.47-deno-v2.6.10-win-x64.zip",
-            "hash": "5b441d8f5155b308f47e9bd2dcac36a34589ba37f0d6a359fdf9368ac03b9970",
+            "hash": "",
             "extract_dir": "claude-code"
         },
         "arm64": {
             "url": "https://github.com/li-ruijie/claude-code/releases/download/claude-code-v2.1.47-deno-v2.6.10/claude-code-v2.1.47-deno-v2.6.10-win-arm64.zip",
-            "hash": "27743e043634e8894da0a43549f6732a1dda7e0de434cb387d755f73c3d6b11e",
+            "hash": "",
             "extract_dir": "claude-code"
         }
     },
