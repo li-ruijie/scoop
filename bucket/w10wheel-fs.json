@@ -1,0 +1,13 @@
+{
+    "version": "0",
+    "description": "Mouse wheel simulator for Windows (.NET)",
+    "homepage": "https://github.com/li-ruijie/w10wheel-fs",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/li-ruijie/w10wheel-fs/releases/download/v$version/W10Wheel.NET-v$version.zip",
+    "hash": "",
+    "bin": "W10Wheel.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/li-ruijie/w10wheel-fs/releases/download/v$version/W10Wheel.NET-v$version.zip"
+    }
+}
