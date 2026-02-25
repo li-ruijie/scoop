@@ -1,0 +1,13 @@
+{
+    "version": "0",
+    "description": "Mouse wheel simulator for Windows (C)",
+    "homepage": "https://github.com/li-ruijie/w10wheel-c",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/li-ruijie/w10wheel-c/releases/download/v$version/W10Wheel-v$version.zip",
+    "hash": "",
+    "bin": "W10Wheel.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/li-ruijie/w10wheel-c/releases/download/v$version/W10Wheel-v$version.zip"
+    }
+}
