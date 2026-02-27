@@ -1,10 +1,10 @@
 {
-    "version": "3.0.0",
+    "version": "0",
     "description": "TrackPoint keyboard helper for Windows (C, MSVC)",
     "homepage": "https://github.com/li-ruijie/tpkb",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/li-ruijie/tpkb/releases/download/v3.0.0/tpkb-v3.0.0-msvc.zip",
-    "hash": "d2d82bc5acce99dc46fc1998da10139ef7b5fde31261d4ff8968e7a7c6656a94",
+    "url": "https://github.com/li-ruijie/tpkb/releases/download/v0/tpkb-v0-msvc.zip",
+    "hash": "0000000000000000000000000000000000000000000000000000000000000000",
     "bin": "tpkb.exe",
     "checkver": "github",
     "autoupdate": {
