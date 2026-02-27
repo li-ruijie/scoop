@@ -1,10 +1,10 @@
 {
-    "version": "0",
+    "version": "3.0.0",
     "description": "TrackPoint keyboard helper for Windows (C, MinGW)",
     "homepage": "https://github.com/li-ruijie/tpkb",
     "license": "GPL-3.0-only",
     "url": "https://github.com/li-ruijie/tpkb/releases/download/v3.0.0/tpkb-v3.0.0-mingw.zip",
-    "hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "hash": "70aeb9444341e9982d7e9edab1fe3e624c076ee8007a3946b91ac367afe959b7",
     "bin": "tpkb.exe",
     "checkver": "github",
     "autoupdate": {
