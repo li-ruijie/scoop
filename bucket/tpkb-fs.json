@@ -1,10 +1,10 @@
 {
-    "version": "0",
+    "version": "3.0.0",
     "description": "TrackPoint keyboard helper for Windows (.NET)",
     "homepage": "https://github.com/li-ruijie/tpkb-fs",
     "license": "GPL-3.0-only",
     "url": "https://github.com/li-ruijie/tpkb-fs/releases/download/v3.0.0/tpkb-v3.0.0.zip",
-    "hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "hash": "d7b7f1fb6af3865da83c87420f5c936d8c0029c317e8c71257a5c80498f13ff5",
     "bin": "tpkb.exe",
     "checkver": "github",
     "autoupdate": {
