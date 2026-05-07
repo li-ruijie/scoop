@@ -3,7 +3,8 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/bcpierce00/unison/releases/download/v2.54.0/unison-2.54.0-windows-x86_64.zip",
-            "hash": "8e0c9070824dc7e3f207d54c8afdec1af55ac26af2740d0d5d7b6e00c44d5fab"
+            "hash": "8e0c9070824dc7e3f207d54c8afdec1af55ac26af2740d0d5d7b6e00c44d5fab",
+            "extract_dir": "unison-2.54.0-windows-x86_64"
         }
     },
     "description": "A file-synchronization tool.",
@@ -17,7 +18,8 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/bcpierce00/unison/releases/download/v$version/unison-$version-windows-x86_64.zip"
+                "url": "https://github.com/bcpierce00/unison/releases/download/v$version/unison-$version-windows-x86_64.zip",
+                "extract_dir": "unison-$version-windows-x86_64"
             }
         }
     }
