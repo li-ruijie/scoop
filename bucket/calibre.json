@@ -1,12 +1,12 @@
 {
-    "version": "9.12.0",
+    "version": "9.13.0",
     "description": "E-book manager.",
     "homepage": "https://calibre-ebook.com/",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kovidgoyal/calibre/releases/download/v9.12.0/calibre-64bit-9.12.0.msi",
-            "hash": "f6456073bfcf37adf6302fb4149fa8b4d798d411bc0dafd99cb629a5006dcfa6",
+            "url": "https://github.com/kovidgoyal/calibre/releases/download/v9.13.0/calibre-64bit-9.13.0.msi",
+            "hash": "f5f19e870163c20ec63a656d6f5d0c123e07c4254899380ebeec51b00766e615",
             "extract_dir": "PFiles\\Calibre2"
         }
     },
