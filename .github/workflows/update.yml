@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          fetch-depth: 0
+          persist-credentials: false
 
       - name: Clone Scoop for checkver script
         run: git clone https://github.com/ScoopInstaller/Scoop.git --depth 1 "$RUNNER_TEMP/scoop-bin"
@@ -32,36 +32,58 @@ jobs:
             if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           ' 2>&1
 
-      - name: Commit and push changes
-        shell: bash
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          changed=false
-          for f in $(git diff --name-only -- bucket/); do
-            app=$(basename "$f" .json)
-            version=$(python -c "import json,sys;print(json.load(open(sys.argv[1]))['version'])" "$f")
-            git add "$f"
-            git commit -m "$app: Update to version $version"
-            changed=true
-          done
-          if [ "$changed" = true ]; then
-            git push
-          else
-            echo "No changes to commit"
-          fi
+      # Commits are created through the GraphQL API rather than with `git
+      # commit`, so GitHub signs them and they show as Verified. A commit
+      # pushed by git from a runner has no signing key available and is
+      # therefore always unverified.
+      - name: Commit changes through the API
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const fs = require('fs');
+            const { execSync } = require('child_process');
 
-      - name: Truncate history if over 1000 commits
-        shell: bash
-        run: |
-          count=$(git rev-list --count HEAD)
-          if [ "$count" -gt 1000 ]; then
-            echo "Commit count ($count) exceeds 1000, truncating..."
-            cutoff=$(git rev-list --skip=999 --max-count=1 HEAD)
-            new_root=$(git commit-tree "${cutoff}^{tree}" -m "$(git log -1 --format=%B "$cutoff")")
-            git rebase --onto "$new_root" "$cutoff"
-            git push --force
-            echo "Truncated to $(git rev-list --count HEAD) commits"
-          else
-            echo "Commit count ($count) is within limit"
-          fi
+            const changed = execSync('git diff --name-only -- bucket/', { encoding: 'utf8' })
+              .split('\n')
+              .map(s => s.trim())
+              .filter(Boolean);
+
+            if (changed.length === 0) {
+              core.info('No changes to commit');
+              return;
+            }
+
+            const branch = context.ref.replace('refs/heads/', '');
+            let oid = execSync('git rev-parse HEAD', { encoding: 'utf8' }).trim();
+
+            for (const path of changed) {
+              // Commit the bytes on disk verbatim. Decoding to a string and
+              // re-encoding would drop a BOM and rewrite line endings.
+              const buf = fs.readFileSync(path);
+              const app = path.split('/').pop().replace(/\.json$/, '');
+              const version = JSON.parse(buf.toString('utf8').replace(/^\uFEFF/, '')).version;
+
+              const result = await github.graphql(
+                `mutation($input: CreateCommitOnBranchInput!) {
+                   createCommitOnBranch(input: $input) { commit { oid } }
+                 }`,
+                {
+                  input: {
+                    branch: {
+                      repositoryNameWithOwner: `${context.repo.owner}/${context.repo.repo}`,
+                      branchName: branch,
+                    },
+                    message: { headline: `${app}: Update to version ${version}` },
+                    expectedHeadOid: oid,
+                    fileChanges: {
+                      additions: [{ path, contents: buf.toString('base64') }],
+                    },
+                  },
+                },
+              );
+
+              oid = result.createCommitOnBranch.commit.oid;
+              core.info(`${app}: ${version}  ${oid.slice(0, 8)}`);
+            }
+
+            core.info(`Committed ${changed.length} manifest update(s)`);
