@@ -1,0 +1,20 @@
+{
+    "version": "4.125.0",
+    "description": "Command line interface for Cloudflare Workers.",
+    "homepage": "https://developers.cloudflare.com/workers/wrangler/",
+    "license": "MIT|Apache-2.0",
+    "depends": "nodejs",
+    "url": "https://github.com/li-ruijie/wrangler/releases/download/v4.125.0/wrangler-windows-x64.zip",
+    "hash": "15e9410ca9fa8100618c84623975937644348d82170e15da1511a6e821359b14",
+    "notes": "Deliberately not shimmed onto PATH. Run wrangler through the launcher at '$dir\\wrangler.cmd'.",
+    "checkver": {
+        "github": "https://github.com/li-ruijie/wrangler"
+    },
+    "autoupdate": {
+        "url": "https://github.com/li-ruijie/wrangler/releases/download/v$version/wrangler-windows-x64.zip",
+        "hash": {
+            "url": "https://github.com/li-ruijie/wrangler/releases/download/v$version/SHA256SUMS.txt",
+            "regex": "([a-fA-F0-9]{64})\\s+$basename"
+        }
+    }
+}
