@@ -1,12 +1,12 @@
 {
-    "version": "20261104.0517-5088dfa5",
+    "version": "20261105.0533-86cae876",
     "description": "A simple GUI for Neovim (nightly build)",
     "homepage": "https://neovide.dev",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/neovide/neovide/releases/download/nightly/neovide-windows-x86_64.zip",
-            "hash": "ae1b8219a9fd1affe39b9a2e8ab1128e92b4ed1056dd25ad21169cfa2fa9b607"
+            "hash": "95c87d40a4d2ca1c3525fb65ea1af556c2ca2f8ca6f0949a046ba69936cd323c"
         }
     },
     "bin": "neovide.exe",
