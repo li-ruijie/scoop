@@ -18,19 +18,40 @@ jobs:
         with:
           persist-credentials: false
 
+      # The network-bound steps retry after a delay, so a transient fault
+      # does not fail the run. A run that fails anyway is rerun by retry.yml.
       - name: Clone Scoop for checkver script
-        run: git clone https://github.com/ScoopInstaller/Scoop.git --depth 1 "$RUNNER_TEMP/scoop-bin"
         shell: bash
+        run: |
+          url=https://github.com/ScoopInstaller/Scoop.git
+          for attempt in 1 2 3; do
+            git clone "$url" --depth 1 "$RUNNER_TEMP/scoop-bin" && exit 0
+            rm -rf "$RUNNER_TEMP/scoop-bin"
+            if [ "$attempt" -lt 3 ]; then
+              echo "::warning::Clone attempt $attempt failed, retrying in 60 s"
+              sleep 60
+            fi
+          done
+          exit 1
 
+      # Rerunning checkver after a partial failure is safe, since a manifest
+      # it has already rewritten is checked again and left as it is.
       - name: Run checkver on all manifests
         shell: bash
         run: |
-          pwsh -NoProfile -Command '
-            $ErrorActionPreference = "Stop"
-            $scoopBin = Join-Path $env:RUNNER_TEMP "scoop-bin"
-            & "$scoopBin/bin/checkver.ps1" -Dir bucket -Update
-            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          ' 2>&1
+          for attempt in 1 2 3; do
+            pwsh -NoProfile -Command '
+              $ErrorActionPreference = "Stop"
+              $scoopBin = Join-Path $env:RUNNER_TEMP "scoop-bin"
+              & "$scoopBin/bin/checkver.ps1" -Dir bucket -Update
+              if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+            ' 2>&1 && exit 0
+            if [ "$attempt" -lt 3 ]; then
+              echo "::warning::checkver attempt $attempt failed, retrying in 120 s"
+              sleep 120
+            fi
+          done
+          exit 1
 
       # Commits are created through the GraphQL API rather than with `git
       # commit`, so GitHub signs them and they show as Verified. A commit
@@ -53,6 +74,22 @@ jobs:
               return;
             }
 
+            // A retry sends the same expectedHeadOid. If a mutation succeeded
+            // but its response was lost, the retry fails on the moved head
+            // rather than committing the manifest twice.
+            const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+            async function withRetry(label, fn) {
+              for (let attempt = 1; ; attempt++) {
+                try {
+                  return await fn();
+                } catch (err) {
+                  if (attempt === 3) throw err;
+                  core.warning(`${label}: attempt ${attempt} failed (${err.message}), retrying in 30 s`);
+                  await sleep(30000);
+                }
+              }
+            }
+
             const branch = context.ref.replace('refs/heads/', '');
             let oid = execSync('git rev-parse HEAD', { encoding: 'utf8' }).trim();
 
@@ -63,7 +100,7 @@ jobs:
               const app = path.split('/').pop().replace(/\.json$/, '');
               const version = JSON.parse(buf.toString('utf8').replace(/^\uFEFF/, '')).version;
 
-              const result = await github.graphql(
+              const result = await withRetry(app, () => github.graphql(
                 `mutation($input: CreateCommitOnBranchInput!) {
                    createCommitOnBranch(input: $input) { commit { oid } }
                  }`,
@@ -80,7 +117,7 @@ jobs:
                     },
                   },
                 },
-              );
+              ));
 
               oid = result.createCommitOnBranch.commit.oid;
               core.info(`${app}: ${version}  ${oid.slice(0, 8)}`);
