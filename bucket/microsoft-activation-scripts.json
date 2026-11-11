@@ -1,14 +1,14 @@
 {
     "homepage": "https://github.com/massgravel/Microsoft-Activation-Scripts",
-    "version": "3.12",
+    "version": "3.14",
     "description": "A Windows and Office activator using HWID / Ohook / KMS38 / Online KMS activation methods, with a focus on open-source code and fewer antivirus detections.",
     "license": "GPL-3.0-only",
     "checkver": {
         "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/releases/latest",
         "re": "releases/tag/(\\d+\\.\\d+)\""
     },
-    "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/tags/3.12.zip",
-    "hash": "813d9a9ef9bf6f1c31d97f7b2d9b6393a1d4593c738f3a8940f311f2a09518ba",
+    "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/tags/3.14.zip",
+    "hash": "e0a2a8fd617911b4ec316c2688283cbb26f93b1e1b5ac0c5da6eadde131802e5",
     "autoupdate": {
         "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/tags/$version.zip"
     },
