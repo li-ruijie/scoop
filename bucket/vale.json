@@ -1,6 +1,6 @@
 {
     "homepage": "https://github.com/errata-ai/vale",
-    "version": "3.26.0",
+    "version": "3.27.0",
     "description": "Vale is a command-line tool that brings code-like linting to prose.",
     "checkver": {
         "url": "https://github.com/errata-ai/vale/releases/latest",
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/errata-ai/vale/releases/download/v3.26.0/vale_3.26.0_Windows_64-bit.zip",
-            "hash": "c42f4b413aa29b6b36fa4e3ac0c18322588a54ac860db4c84b8255997f7d1ec2"
+            "url": "https://github.com/errata-ai/vale/releases/download/v3.27.0/vale_3.27.0_Windows_64-bit.zip",
+            "hash": "26e61cc58ac4180866d068dc2325d2625560c8cc518de7e7b5523211a5ab0cbc"
         }
     },
     "autoupdate": {
